@@ -1,0 +1,134 @@
+.Header-container {
+  display: flex;
+  // border: 1px solid red;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  z-index: 4;
+
+  .open-category {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    // border: 1px solid red;
+
+    margin: 0 10px;
+    .category-line {
+      border-bottom: 2.5px solid #585858;
+    }
+    .cate-line-1 {
+      width: 85%;
+      transition: all 0.2s ease-in-out;
+    }
+    .cate-line-2 {
+      width: 100%;
+      margin: 7px 0;
+    }
+    .cate-line-3 {
+      width: 70%;
+      transition: all 0.2s ease-in-out;
+    }
+    &:hover {
+      .cate-line-1 {
+        width: 100%;
+      }
+      .cate-line-3 {
+        width: 100%;
+      }
+    }
+  }
+  .logo {
+    margin-left: 20px;
+
+    h1 {
+      margin: 0;
+    }
+  }
+  .NavesContainer {
+    width: 70%;
+    // border: 1px solid blue;
+    transition: 0.6s ease;
+    z-index: 1;
+    .Naves {
+      // border: 1px solid blue;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+  }
+  .toggoler {
+    margin: 0 10px;
+    display: none;
+    .toggle {
+      cursor: pointer;
+      width: 30px;
+      height: 32px;
+      margin-bottom: 5px;
+      position: relative;
+
+      .lines {
+        transition: 0.4s ease;
+      }
+      .line {
+        width: 30px;
+        height: 3px;
+        margin: 7px 0;
+        background-color: #585858;
+      }
+      .line-1 {
+        transform: rotate(40deg);
+        position: absolute;
+        top: 15px;
+        right: 0;
+        width: 30px;
+        height: 3px;
+        background-color: #585858;
+      }
+      .line-2 {
+        display: none;
+      }
+      .line-3 {
+        transform: rotate(-40deg);
+        position: absolute;
+        top: 15px;
+        right: 0;
+        width: 30px;
+        height: 3px;
+        background-color: #585858;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1250px) {
+  .Header-container {
+    .logo {
+      margin: 8px auto;
+
+      h1 {
+        margin: 0;
+      }
+    }
+    .NavesContainer {
+      position: absolute;
+      top: 55px;
+      right: -300px;
+      height: 100vh;
+      width: 300px;
+      overflow-x: hidden;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      .Naves {
+        background-color: rgba($color: #000000, $alpha: 0.7);
+        flex-direction: column-reverse;
+        justify-content: start;
+        width: inherit;
+        height: 100%;
+      }
+    }
+    .toggoler {
+      display: block;
+    }
+  }
+}

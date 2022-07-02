@@ -1,0 +1,130 @@
+.user-options-container {
+  z-index: 3;
+  width: 300px;
+  height: 500px;
+  background-color: #fff;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  position: fixed;
+  top: 100px;
+  right: -300px;
+  border-radius: 5px 1px 1px 5px;
+  transition: all 0.5s ease-in-out;
+  .profile-photo {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 auto;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .option-box {
+    margin-top: 20px;
+    width: 100%;
+    height: 380px;
+    box-sizing: border-box;
+    ul {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      width: 100%;
+      height: inherit;
+      list-style: none;
+      overflow-y: scroll;
+      li {
+        .option-item {
+          display: block;
+          text-decoration: none;
+          color: #585858;
+          border: 1px solid #585858;
+          padding: 7px 15px;
+          width: 200px;
+          margin: 20px auto;
+          border-radius: 5px;
+          text-align: center;
+          transition: 0.3s ease-in-out;
+          &:hover {
+            background-color: #585858;
+            transform: scale(1.05);
+            color: whitesmoke;
+          }
+        }
+      }
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+  .OnOff-option-box {
+    cursor: pointer;
+    width: 60px;
+    height: 50px;
+    background-color: #585858;
+    border-radius: 50px 0 0 50px;
+    position: absolute;
+    top: 100px;
+    left: -60px;
+    .user-option-setting-box {
+      position: relative;
+      width: inherit;
+      height: inherit;
+      padding: 2px;
+      box-sizing: border-box;
+      .option-setting {
+        z-index: 1;
+        width: 90%;
+        height: 90%;
+        color: white;
+        position: absolute;
+        top: 1.5px;
+        left: 2.5px;
+        animation-name: UserOptionSettingRotate;
+        animation-duration: 10s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+      }
+      @keyframes UserOptionSettingRotate {
+        0% {
+          transform: rotate(0deg);
+          transform-origin: center;
+        }
+        100% {
+          transform: rotate(360deg);
+          transform-origin: center;
+        }
+      }
+      .profile-option {
+        z-index: 0;
+        width: 23px;
+        height: 23px;
+        border-radius: 50px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        overflow: hidden;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+.user-options-container-on {
+  z-index: 7;
+  right: 1px;
+}
+.cover-on-off {
+  z-index: 6;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba($color: #000000, $alpha: 0.5);
+}

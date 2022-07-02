@@ -1,0 +1,22 @@
+.footer-nav-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  .footer-itme {
+    margin: 0 10px;
+    height: 60px;
+    p {
+      color: #585858;
+      width: 100%;
+      span {
+        color: black;
+        font-weight: bolder;
+      }
+    }
+    img {
+      width: inherit;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+.loader-container {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: #fff;
+  max-width: 100%;
+  .loader-icon {
+    width: 10vmax;
+    height: 10vmax;
+    border-bottom: 5px solid #01a414;
+    border-radius: 50%;
+    animation: loading infinite linear 800ms;
+    @keyframes loading {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  }
+}

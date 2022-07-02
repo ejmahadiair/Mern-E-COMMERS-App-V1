@@ -1,0 +1,204 @@
+.account-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #dddddd;
+  .user-account-container {
+    position: relative;
+    background-color: #fff;
+    width: 350px;
+    height: 500px;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
+    .login-signUp-button {
+      .logiin-signUp-button-action {
+        display: flex;
+        justify-content: space-evenly;
+        p {
+          cursor: pointer;
+          padding: 15px 5px;
+          width: 50%;
+          text-align: center;
+          color: #585858;
+          transition: 0.5s ease-in-out;
+        }
+      }
+      .switch-to-left {
+        width: 50%;
+        height: 2px;
+        background-color: tomato;
+        transform: translateX(0%);
+        transition: 0.4s ease-in-out;
+      }
+      .switch-to-right {
+        width: 49%;
+        height: 2px;
+        background-color: tomato;
+        transform: translateX(103%);
+        transition: 0.4s ease-in-out;
+      }
+    }
+    .login-container {
+      position: absolute;
+      top: 10%;
+      left: -100%;
+      width: 100%;
+      padding: 10px 20px;
+      box-sizing: border-box;
+      transition: all 0.4s ease-in-out;
+      .login-form {
+        .input-container {
+          width: 100%;
+          box-sizing: border-box;
+          position: relative;
+          margin: 20px 0;
+          svg {
+            position: absolute;
+            top: 20%;
+            left: 3%;
+          }
+          .login-visibility-conrtol {
+            position: absolute;
+            top: 20%;
+            right: 10%;
+            width: fit-content;
+            height: fit-content;
+          }
+          input {
+            padding: 15px 10px 15px 50px;
+            width: 100%;
+            outline: none;
+            border: 1px solid #dddddd;
+            border-radius: 3px;
+            box-sizing: border-box;
+            transition: all 0.4s ease-in-out;
+            &:focus {
+              background-color: #dddddd;
+              font-size: 20px;
+            }
+          }
+        }
+        .forget-password {
+          cursor: pointer;
+          color: #585858;
+          text-align: right;
+        }
+        .login-button-container {
+          width: 70%;
+          margin: 20px auto;
+          transition: all 0.4s ease-in-out;
+          .login-button {
+            cursor: pointer;
+            padding: 10px;
+            width: 100%;
+            border: 1px solid tomato;
+            background-color: tomato;
+            color: white;
+            border-radius: 5px;
+          }
+          &:hover {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .register-container {
+      position: absolute;
+      top: 10%;
+      left: -100%;
+      width: 100%;
+      padding: 10px 20px;
+      box-sizing: border-box;
+      transition: all 0.4s ease-in-out;
+      .register-form {
+        .register-input-container {
+          width: 100%;
+          box-sizing: border-box;
+          position: relative;
+          margin: 20px 0;
+          svg {
+            position: absolute;
+            top: 20%;
+            left: 3%;
+          }
+          .register-visibility-conrtol {
+            position: absolute;
+            top: 20%;
+            right: 10%;
+            width: fit-content;
+            height: fit-content;
+          }
+          input {
+            padding: 15px 10px 15px 50px;
+            width: 100%;
+            outline: none;
+            border: 1px solid #dddddd;
+            border-radius: 3px;
+            box-sizing: border-box;
+            transition: all 0.4s ease-in-out;
+            &:focus {
+              background-color: #dddddd;
+              font-size: 20px;
+            }
+          }
+        }
+        .Register-button-container {
+          width: 70%;
+          margin: 20px auto;
+          transition: all 0.4s ease-in-out;
+          .register-button {
+            cursor: pointer;
+            padding: 10px;
+            width: 100%;
+            border: 1px solid tomato;
+            background-color: tomato;
+            color: white;
+            border-radius: 5px;
+          }
+          &:hover {
+            width: 100%;
+          }
+        }
+      }
+    }
+    .login-container-switched {
+      position: absolute;
+      top: 10%;
+      left: 0;
+      width: 100%;
+      padding: 10px 20px;
+      box-sizing: border-box;
+    }
+    .register-container-switched {
+      position: absolute;
+      top: 10%;
+      left: 0;
+      width: 100%;
+      padding: 10px 20px;
+      box-sizing: border-box;
+    }
+    .riderect-home {
+      font-weight: bolder;
+      letter-spacing: 1px;
+      color: #585858;
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      text-decoration: none;
+    }
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
+}
+@media screen and (max-width: 400px) {
+  .account-container {
+    .user-account-container {
+      width: 95%;
+    }
+  }
+}

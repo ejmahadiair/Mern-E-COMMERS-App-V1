@@ -1,0 +1,375 @@
+.product-details-container {
+  padding: 0px 15px;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  .image-container {
+    width: 25%;
+    padding: 10px 25px;
+    display: flex;
+    align-items: center;
+    .Carosole-image-container {
+      width: 100%;
+      height: 100%;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  .details-contaner {
+    width: 45%;
+    padding: 30px;
+    color: #494949;
+
+    .section {
+      margin: 20px 0;
+      hr {
+        width: 75%;
+        margin: 20px 0;
+      }
+    }
+    .detail-sectio2 {
+      .sub-section-review {
+        display: flex;
+        align-items: center;
+        span {
+          margin: 0 5px;
+        }
+      }
+    }
+    .detail-sectio3 {
+      h1 {
+        margin: 15px 0;
+        font-size: xx-large;
+      }
+      .sub-section {
+        display: flex;
+        .quantity {
+          display: flex;
+          align-items: center;
+          margin-right: 15px;
+          .numberOfQuentity {
+            background-color: #fff;
+            font-weight: bold;
+            font-size: 20px;
+            margin: 0 5px;
+            width: 25px;
+            height: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          button {
+            cursor: pointer;
+            border: 1px solid #494949;
+            background-color: #161616;
+            padding: 5px 15px;
+            color: white;
+            font-size: 20px;
+            border-radius: 3px;
+            transition: 0.4s ease;
+            &:hover {
+              background-color: transparent;
+              transform: scale(1.05);
+              color: #161616;
+            }
+          }
+        }
+        .Add-to-cart {
+          cursor: pointer;
+          padding: 7px 15px;
+          border: 1px solid tomato;
+          background-color: transparent;
+          border-radius: 7px;
+          color: #585858;
+          font-weight: bold;
+          transition: all 0.4s ease;
+          &:hover {
+            background-color: tomato;
+            color: white;
+            padding: 7px 20px;
+            margin-left: 10px;
+            border-radius: 25px;
+          }
+        }
+      }
+    }
+    .detail-sectio4 {
+      .in-stock {
+        span {
+          color: green;
+          font-weight: bold;
+        }
+      }
+      .out-of-stock {
+        span {
+          color: red;
+          font-weight: bold;
+        }
+      }
+    }
+    .buy-now {
+      cursor: pointer;
+      padding: 10px 25px;
+      border: 1px solid tomato;
+      background-color: transparent;
+      border-radius: 7px;
+      color: #585858;
+      font-weight: bold;
+      transition: 0.4s ease-in-out;
+      &:hover {
+        background-color: tomato;
+        color: white;
+        border-radius: 25px;
+        animation-name: submitmove;
+        animation-duration: 500ms;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: ease-in-out;
+      }
+      @keyframes submitmove {
+        0% {
+          transform: scale(1.1) translateY(-5px);
+        }
+        100% {
+          transform: scale(1) translateY(5px);
+        }
+      }
+    }
+  }
+}
+.review-details-container {
+  display: flex;
+  flex-wrap: wrap;
+  .card-title-container {
+    width: fit-content;
+    margin: 10px auto;
+    padding: 15px;
+    .card-title {
+      cursor: pointer;
+      text-align: center;
+      font-size: inherit;
+      &:hover ~ .card-hr {
+        width: 100%;
+      }
+    }
+    .card-hr {
+      width: 0%;
+      border-bottom: 5px;
+      margin: 10px auto;
+      background-color: #787878;
+      height: 1px;
+      transition: 0.2s ease-in-out;
+    }
+    .active-hr {
+      width: 100%;
+    }
+  }
+}
+.review-details-breakline {
+  width: 90%;
+  margin: 0 auto 10px auto;
+}
+.description-container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+
+  .description-title {
+    margin-bottom: 10px;
+  }
+  .spacification {
+    .spacification-detail {
+      margin-top: 5px;
+      font-size: 20px;
+    }
+  }
+}
+.review-container {
+  display: flex;
+  margin: 0 auto;
+  width: 80%;
+  height: 500px;
+  border: 1px solid #161616;
+  border-radius: 5px;
+  padding: 5px;
+  .post-review {
+    width: 49.5%;
+    padding: 20px;
+    box-sizing: border-box;
+    .post-tag {
+      margin-bottom: 20px;
+    }
+    .post-review-container {
+      .rating-title {
+        display: flex;
+        span {
+          color: red;
+          font-weight: bold;
+        }
+        margin-bottom: 15px;
+      }
+      .rating-user-name {
+        margin-bottom: 20px;
+        div {
+          display: flex;
+          margin-bottom: 10px;
+          span {
+            color: red;
+            font-weight: bold;
+          }
+        }
+        #user-name-rating {
+          padding: 12px;
+          width: 100%;
+          outline: none;
+          box-sizing: border-box;
+          border: 1px solid #e7e7e7;
+          &:focus {
+            border: 1px solid #585858;
+          }
+        }
+      }
+      .rating-comment {
+        margin-bottom: 15px;
+        div {
+          display: flex;
+          margin-bottom: 10px;
+          span {
+            color: red;
+            font-weight: bold;
+          }
+        }
+        textarea {
+          width: 100%;
+          height: 140px;
+          box-sizing: border-box;
+          outline: none;
+          border: 1px solid #e7e7e7;
+          &:focus {
+            border: 1px solid #585858;
+          }
+        }
+      }
+      .Are-you-humna {
+        display: flex;
+        width: 400px;
+
+        .captcha {
+          display: flex;
+          padding: 10px;
+          margin: 0 20px 0 0;
+          width: 130px;
+          background-color: #eae4e4;
+          align-items: center;
+          justify-content: space-around;
+        }
+        input {
+          padding: 10px;
+          outline: none;
+          box-sizing: border-box;
+          border: 1px solid #e7e7e7;
+          &:focus {
+            border: 1px solid #585858;
+          }
+        }
+        margin-bottom: 15px;
+      }
+      button {
+        cursor: pointer;
+        padding: 10px 20px;
+        border: 1px solid #585858;
+        border-radius: 5px;
+        background-color: transparent;
+        transition: 0.4s ease-in-out;
+        &:hover {
+          background-color: #585858;
+          color: white;
+        }
+      }
+    }
+  }
+  .post-show-brakline {
+    width: 1px;
+    background-color: #585858;
+    height: 100%;
+  }
+  .show-review {
+    width: 49.5%;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 10px;
+    box-sizing: border-box;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    .no-review {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+// Responsive Started from here
+@media screen and(max-width:1050px) {
+  .product-details-container {
+    flex-direction: column;
+    align-items: center;
+    .image-container {
+      width: 90%;
+      flex-direction: column;
+    }
+    .details-contaner {
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .detail-sectio3 {
+        .sub-section {
+          flex-direction: column;
+          .Add-to-cart {
+            align-self: flex-start;
+            margin-top: 10px;
+            padding: 10px 20px;
+            &:hover {
+              background-color: tomato;
+              color: white;
+              padding: 10px 20px;
+              margin-left: 0;
+              border-radius: 25px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .review-container {
+    flex-direction: column;
+    height: 1000px;
+    .show-review {
+      width: 100%;
+    }
+    .post-show-brakline {
+      width: 100%;
+      height: 1px;
+    }
+    .post-review {
+      margin-top: 10px;
+      width: 100%;
+      .post-review-container {
+        .Are-you-humna {
+          width: 100%;
+          flex-direction: column;
+          input {
+            margin-top: 10px;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

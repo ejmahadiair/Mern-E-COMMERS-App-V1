@@ -1,0 +1,122 @@
+.side-nav-container {
+  // border: 1px solid red;
+  width: fit-content;
+  height: fit-content;
+  .nav-bar {
+    // border: 1px solid green;
+    width: fit-content;
+    height: fit-content;
+    .nav {
+      // border: 1px solid blue;
+      display: flex;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      .nav-item {
+        text-align: center;
+        .search-link {
+          background-color: transparent;
+          width: 35px;
+          height: 35px;
+          margin: 5px 5px;
+          cursor: pointer;
+        }
+        .btn-link {
+          text-decoration: none;
+          display: block;
+          padding: 10px 18px;
+          border: 1px solid #585858;
+          border-radius: 5px;
+          margin: 5px 5px;
+          color: #585858;
+          transition: background 0.5s ease, color 0.4s ease;
+          &:hover {
+            background: #585858;
+            color: #fffde4;
+            border: none;
+            padding: 11px 19px;
+          }
+        }
+      }
+      .search-nav-item {
+        position: relative;
+        .search-form {
+          height: 0;
+          visibility: hidden;
+          .search-box {
+            height: inherit;
+            width: inherit;
+            border: none;
+            background: #ddd;
+            border-radius: 7px;
+          }
+        }
+        .form-search {
+          height: 50px;
+          visibility: visible;
+          .search-box {
+            height: inherit;
+            border: none;
+            width: inherit;
+            background: #ddd;
+            border-radius: 7px;
+          }
+        }
+        .search-has {
+          width: 300px;
+          position: absolute;
+          top: 60px;
+          left: 50%;
+          transform: translateX(-50%);
+          transition: 0.4s ease;
+          .search-in {
+            margin: 5px;
+            width: 30px;
+            height: 30px;
+            border: none;
+            background-color: transparent;
+            .in-search {
+              width: inherit;
+              height: inherit;
+              background-color: transparent;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and(max-width:1250px) {
+  .side-nav-container {
+    .nav-bar {
+      .nav {
+        flex-direction: column;
+        .search-nav-item {
+          .search-has {
+            margin: 5px 6px 40px 6px;
+            width: 92%;
+            left: 0;
+            transform: translateX(0);
+            position: static;
+            .search-box {
+              width: 100%;
+            }
+          }
+        }
+        .nav-item {
+          .btn-link {
+            border: 1px solid whitesmoke;
+            color: white;
+            &:hover {
+              background: whitesmoke;
+              color: #585858;
+              border: none;
+              padding: 11px 19px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
